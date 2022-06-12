@@ -15,6 +15,53 @@ const Project = ({ name, description, image, link, index }: Props) => {
 
   const isIndexEven = index % 2 === 0;
 
+  const pseudoElementsStyles = {
+    "&:before, &:after": {
+      content: "''",
+      backgroundColor: "secondary.main",
+      position: "absolute",
+      display: isTablet ? "block" : "none",
+    },
+  };
+
+  const horizontalBarStyles = {
+    "&:before": {
+      height: "5px",
+      width: { md: "25.5%", lg: isIndexEven ? "25.5%" : "25%" },
+      left: isIndexEven ? "36.5%" : "50%",
+      transform: `translate(${isIndexEven ? "-36.75%" : "10%"})`,
+      top: "-10px",
+    },
+  };
+
+  const verticalBarStyles = {
+    "&:after": {
+      height: "50px",
+      width: "5px",
+      left: isIndexEven ? "27%" : "77.5%",
+      top: "-10px",
+      borderRadius: `
+              ${isIndexEven ? "4px" : "0"}
+              ${isIndexEven ? "0" : "4px"} 0 0`,
+    },
+  };
+
+  const barTipStyles = {
+    "&:before": {
+      content: "''",
+      backgroundColor: "secondary.main",
+      position: "absolute",
+      display: isTablet ? "block" : "none",
+      width: "15px",
+      height: "15px",
+      left: isIndexEven ? "54.2%" : "55.2%",
+      top: "10.5px",
+      transform: `rotate(45deg) translateX(${
+        isIndexEven ? "-54.2%" : "-55.2%"
+      })`,
+    },
+  };
+
   return (
     <Link href={link} passHref>
       <a target="_blank">
@@ -29,37 +76,9 @@ const Project = ({ name, description, image, link, index }: Props) => {
           sx={{
             backdropFilter: "blur(5px)",
             position: "relative",
-            // --------------- Styles for both pseudo elements -----------------
-            "&:before, &:after": {
-              content: "''",
-              backgroundColor: "secondary.main",
-              position: "absolute",
-              display: isTablet ? "block" : "none",
-            },
-            // --------------- Styles for both pseudo elements -----------------
-
-            // ----------------------- Horizontal bar --------------------------
-            "&:before": {
-              height: "5px",
-              // width: isIndexEven ? "25.5%" : "25%",
-              width: {md: "25.5%", lg: isIndexEven ? "25.5%" : "25%"},
-              left: isIndexEven ? "36.5%" : "50%",
-              transform: `translate(${isIndexEven ? "-36.75%" : "10%"})`,
-              top: "-10px",
-            },
-            // ----------------------- Horizontal bar --------------------------
-
-            // ------------------------ Vertical bar ---------------------------
-            "&:after": {
-              height: "50px",
-              width: "5px",
-              left: isIndexEven ? "27%" : "77.5%",
-              top: "-10px",
-              borderRadius: `
-              ${isIndexEven ? "4px" : "0"}
-              ${isIndexEven ? "0" : "4px"} 0 0`,
-            },
-            // ------------------------ Vertical bar ---------------------------
+            ...pseudoElementsStyles,
+            ...horizontalBarStyles,
+            ...verticalBarStyles,
           }}
         >
           {/* -------------------------- Image ----------------------------- */}
@@ -70,22 +89,7 @@ const Project = ({ name, description, image, link, index }: Props) => {
             order={{ md: isIndexEven ? 0 : 1 }}
             sx={{
               position: "relative",
-
-              // -------------------------- Bar tip ----------------------------
-              "&:before": {
-                content: "''",
-                backgroundColor: "secondary.main",
-                position: "absolute",
-                display: isTablet ? "block" : "none",
-                width: "15px",
-                height: "15px",
-                left: isIndexEven ? "54.2%" : "55.2%",
-                top: "10.5px",
-                transform: `rotate(45deg) translateX(${
-                  isIndexEven ? "-54.2%" : "-55.2%"
-                })`,
-              },
-              // -------------------------- Bar tip ----------------------------
+              ...barTipStyles,
             }}
           >
             <Box
