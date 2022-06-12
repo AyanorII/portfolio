@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Audiophile E-commerce",
+    "description": "A multipage ecommerce website using React, react-router-dom, react-hook-form and styled-components. Working with states proved to be a real challenge in this project.",
+    "image": "/projects/audiophile.png",
+    "link": "https://ayanori-toyoda.com/audiophile-ecommerce/#/"
+  },
+  {
+    "name": "Designo Website",
+    "description": "A 7-page, fully responsive project for a fictional company. This was my first time using TypeScript and also was my first contact with a strong typed language.",
+    "image": "/projects/designo.png",
+    "link": "https://ayanori-toyoda.com/designo-react-typescript/"
+  },
+  {
+    "name": "Entertainment App",
+    "description": "This web app built using TypeScript, Next.js, Material UI and Firebase fetches info about the current movies and TV series and allows users to bookmak them. First time using Firebase to handle the authentication and database.",
+    "image": "/projects/entertainment.png",
+    "link": "https://entertainment-app-ayanori.vercel.app/"
+  },
+  {
+    "name": "Invoice App",
+    "description": "Full stack app built with the MERN stack (MongoDB, Express.js, React and Node.js) users can create, delete, edit and read invoices.",
+    "image": "/projects/invoice.png",
+    "link": "https://ayanori-invoice-app-client.herokuapp.com/"
+  },
+  {
+    "name": "Photosnap Website",
+    "description": "This is a marketing site for a fictional photo-sharing app and was a great challenge to understand CSS Grid.",
+    "image": "/projects/photosnap1.png",
+    "link": "https://ayanori-toyoda.com/photosnap-website/"
+  },
+  {
+    "name": "Go-Japan Website",
+    "description": "First experience with Next.js and SEO, this website was built to the Wayfarer Hotels and scrapes news about Japan’s border status and shows information about the company hotels and careers.",
+    "image": "/projects/go-japan.png",
+    "link": "http://go-japan.xyz/"
+  }
+]
