@@ -40,6 +40,7 @@ const HeroContent = () => {
         variant="h6"
         component="p"
         fontWeight="regular"
+        fontFamily="Montserrat, sans-serif"
         maxWidth="50ch"
         margin={{xs: "0 auto", lg: "0"}}
       >
