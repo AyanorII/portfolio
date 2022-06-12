@@ -26,7 +26,8 @@ const SectionTitle = ({
           content: "''",
           position: "absolute",
           backgroundColor: borderColor,
-          boxShadow: `0 2px 15px 0 ${shadowColor}`,
+          boxShadow: `0 2px 30px 0 ${shadowColor},
+                      0 2px 15px 0 #ffffff70`,
         },
 
         "&::before": {

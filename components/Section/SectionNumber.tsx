@@ -22,7 +22,8 @@ const SectionNumber = ({
           borderRadius: "50%",
           border: 4,
           borderColor,
-          boxShadow: `0 4px 30px 4px ${shadowColor}`,
+          boxShadow: `0 4px 30px 4px ${shadowColor},
+                      -5px -10px 15px ${shadowColor} inset`,
           width: { xs: "130px", sm: "150px", md: "180px", lg: "200px" },
           height: { xs: "130px", sm: "150px", md: "180px", lg: "200px" },
         }}
