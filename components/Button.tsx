@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import MuiButton from "@mui/material/Button";
 import React from "react";
 import { PRIMARY_DARK, SECONDARY_DARK, TERTIARY_DARK } from "../styles/Theme";
@@ -37,11 +38,47 @@ const Button = ({ children, variant, color, href }: Props) => {
     paddingBlock: "0.5rem",
     paddingInline: "2rem",
     borderRadius: "4px",
+    border: variant === "outlined" ? 2 : 0,
+    borderColor: color,
+    position: "relative",
+
+    "&:after": {
+      content: "''",
+      position: "absolute",
+      top: 0,
+      bottom: 0,
+      left: "50%",
+      transform: "translateX(-50%)",
+      width: "0%",
+      height: "100%",
+      backgroundColor: variant === "outlined" ? boxShadowColor : "transparent",
+      transition: "all 0.25s ease-in-out",
+    },
+
+    "&:hover": {
+      border: variant === "outlined" ? 2 : 0,
+      borderColor: color,
+    },
+
+    "& span": {
+      transition: "all 0.25s ease-in-out",
+    },
+
+    "&:hover span": {
+      color: "#FFF",
+    },
+
+    "&:hover:after": {
+      width: "100%",
+      zIndex: -1,
+    },
   };
 
   return (
-    <MuiButton variant={variant} color="tertiary" href={href} sx={buttonStyles}>
-      {children}
+    <MuiButton variant={variant} color={color} href={href} sx={buttonStyles}>
+      <Typography variant="inherit" component="span">
+        {children}
+      </Typography>
     </MuiButton>
   );
 };
