@@ -70,8 +70,8 @@ const SectionHeading = ({ title, number, color, direction }: Props) => {
         md: "row",
       }}
       alignItems="center"
-      marginBottom={3}
-      gap={{ xs: 3, md: 5 }}
+      marginBottom={{ xs: 3, lg: 0 }}
+      gap={{ xs: 3, md: 8}}
       sx={dividerStyles}
     >
       <Stack
@@ -79,7 +79,7 @@ const SectionHeading = ({ title, number, color, direction }: Props) => {
           xs: "column",
           md: direction === "left" ? "row" : "row-reverse",
         }}
-        gap="inherit"
+        gap={{ xs: 3, md: 5 }}
         alignItems="center"
       >
         <SectionNumber
