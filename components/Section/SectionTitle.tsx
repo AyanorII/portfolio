@@ -18,6 +18,7 @@ const SectionTitle = ({
       variant="h3"
       component="h2"
       display="inline"
+      whiteSpace="nowrap"
       sx={{
         position: "relative",
 

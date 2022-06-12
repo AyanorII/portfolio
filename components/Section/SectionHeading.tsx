@@ -43,20 +43,58 @@ const SectionHeading = ({ title, number, color, direction }: Props) => {
       break;
   }
 
+  const dividerStyles = {
+    "&::before, &::after": {
+      content: "''",
+      backgroundColor: "gray.light",
+      height: "1px",
+      width: "100%",
+    },
+
+    "&::before": {
+      display: { xs: "none", md: direction === "left" ? "none" : "inline" },
+    },
+
+    "&::after": {
+      display: {
+        xs: "none",
+        md: direction === "right" ? "none" : "inline",
+      },
+    },
+  };
+
   return (
-    <Stack flexDirection={{xs: "column", lg: "row"}} alignItems="center" gap={3}>
-      <SectionNumber
-        number={number}
-        shadowColor={shadowColor}
-        textColor={textColor}
-        borderColor={borderColor}
-      />
-      <SectionTitle
-        title={ title }
-        borderColor={ borderColor }
-        shadowColor={ shadowColor }
-        direction={ direction }
-      />
+    <Stack
+      flexDirection={{
+        xs: "column",
+        md: "row",
+      }}
+      alignItems="center"
+      marginBottom={3}
+      gap={{ xs: 3, md: 5 }}
+      sx={dividerStyles}
+    >
+      <Stack
+        flexDirection={{
+          xs: "column",
+          md: direction === "left" ? "row" : "row-reverse",
+        }}
+        gap="inherit"
+        alignItems="center"
+      >
+        <SectionNumber
+          number={number}
+          shadowColor={shadowColor}
+          textColor={textColor}
+          borderColor={borderColor}
+        />
+        <SectionTitle
+          title={title}
+          borderColor={borderColor}
+          shadowColor={shadowColor}
+          direction={direction}
+        />
+      </Stack>
     </Stack>
   );
 };
