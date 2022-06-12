@@ -58,6 +58,7 @@ const Button = ({ children, variant, color, href }: Props) => {
     "&:hover": {
       border: variant === "outlined" ? 2 : 0,
       borderColor: color,
+      boxShadow: `0 4px 15px 0 ${boxShadowColor}`,
     },
 
     "& span": {
