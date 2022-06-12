@@ -6,7 +6,7 @@ import Skills from "./Skills";
 const AboutSection = () => {
   return (
     <Container>
-      <Stack gap={{ xs: 5, md: 0 }} marginTop={2}>
+      <Stack gap={{ xs: 5, md: 0 }} marginTop={15}>
         <SectionHeading
           title="About Me"
           number={1}

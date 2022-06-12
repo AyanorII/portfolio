@@ -43,7 +43,7 @@ const Skills = (props: Props) => {
   return (
     <Container>
       <Grid container spacing={5}>
-        <Grid item xs={12} marginBottom={2} marginTop={15}>
+        <Grid item xs={12} marginBottom={2} marginTop={{xs: 5, sm: 10, lg: 15}}>
           <Typography
             variant="h3"
             textAlign="center"
