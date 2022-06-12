@@ -71,7 +71,7 @@ const SectionHeading = ({ title, number, color, direction }: Props) => {
       }}
       alignItems="center"
       marginBottom={{ xs: 3, lg: 0 }}
-      gap={{ xs: 3, md: 8}}
+      gap={{ xs: 3, md: 8 }}
       sx={dividerStyles}
     >
       <Stack
