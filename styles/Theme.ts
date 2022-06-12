@@ -79,6 +79,9 @@ let theme = createTheme({
     button: {
       fontFamily: BODY_FONT_FAMILY,
     },
+    allVariants: {
+      color: CONTRAST_TEXT,
+    }
   },
 });
 
