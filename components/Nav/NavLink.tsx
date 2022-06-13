@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 
 type Props = {
@@ -26,7 +26,6 @@ const NavLink = ({ href, label, index }: Props) => {
   }
 
   const linkStyles = {
-    color: "text",
     position: "relative",
 
     "&:after": {
@@ -39,15 +38,34 @@ const NavLink = ({ href, label, index }: Props) => {
       bottom: "-5px",
       left: "0",
     },
-    
+
     "&:hover:after": {
       width: "100%",
     },
   };
 
+  const isMobile = useMediaQuery("(max-width:899px)");
+  const isTablet = useMediaQuery("(max-width:1199px)");
+
+  let variant: "h6" | "h5" | "h4" | "h3";
+
+  if (isMobile) {
+    variant = "h3";
+  } else if (isTablet) {
+    variant = "h5";
+  } else {
+    variant = "h6";
+  }
+
   return (
     <Link href={href} key={label} passHref>
-      <Typography variant="body1" component="a" sx={linkStyles}>
+      <Typography
+        variant={variant}
+        component="a"
+        fontWeight="normal"
+        color={linkBottomColor}
+        sx={linkStyles}
+      >
         {label}
       </Typography>
     </Link>
