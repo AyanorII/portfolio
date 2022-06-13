@@ -70,7 +70,7 @@ const Projects = () => {
     >
       <Grid
         container
-        gap={{ xs: 10, md: 18 }}
+        gap={{ xs: 10, md: 10 }}
         marginTop={{ xs: 5, lg: 18 }}
         justifyContent="center"
         position="relative"
