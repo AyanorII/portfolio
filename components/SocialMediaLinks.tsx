@@ -79,8 +79,8 @@ const SocialMediaLinks = () => {
         ariaLabel="Social media links"
         sx={{
           position: { xs: "static", md: "fixed" },
-          bottom: 32,
-          left: 16,
+          bottom: {xs: 32, lg: 40},
+          left: {xs: 16, lg: 60},
           "& .MuiFab-root": {
             boxShadow: `0px 4px 20px 3px ${PRIMARY_DARK}, 0px 6px 10px 5px rgb(0 0 0 / 65%), 0px 1px 18px 0px rgb(0 0 0 / 12%);`,
           },
