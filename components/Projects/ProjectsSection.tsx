@@ -6,7 +6,7 @@ type Props = {};
 
 const ProjectsSection = (props: Props) => {
   return (
-    <Container sx={{marginTop: 15}}>
+    <Container id="projects" sx={{marginTop: 15}}>
       <SectionHeading
         title="Projects"
         color="secondary"

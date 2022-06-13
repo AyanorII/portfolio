@@ -6,7 +6,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <Container sx={{ marginTop: 10, marginBottom: 15 }}>
+    <Container id="contact" sx={{ marginTop: 10, marginBottom: 15 }}>
       <SectionHeading
         title="Contact"
         number={3}

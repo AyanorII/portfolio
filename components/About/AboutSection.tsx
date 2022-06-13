@@ -5,7 +5,7 @@ import Skills from "./Skills";
 
 const AboutSection = () => {
   return (
-    <Container>
+    <Container id="about">
       <Stack gap={{ xs: 5, md: 0 }} marginTop={15}>
         <SectionHeading
           title="About Me"
