@@ -13,7 +13,12 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { PRIMARY_DARK } from "../styles/Theme";
+import {
+  GRAY_DARK,
+  PRIMARY_DARK,
+  SECONDARY_DARK,
+  TERTIARY_DARK,
+} from "../styles/Theme";
 
 const SOCIAL_MEDIA_LINKS = [
   {
@@ -58,18 +63,18 @@ const SocialMediaLinks = () => {
 
   const router = useRouter();
 
-  const getBackgroundColor = (index: number) => {
+  const getColor = (index: number) => {
     switch (index) {
       case 0:
-        return "primary.main";
+        return PRIMARY_DARK;
       case 1:
-        return "secondary.main";
+        return SECONDARY_DARK;
       case 2:
-        return "tertiary.main";
+        return TERTIARY_DARK;
       case 3:
-        return "gray.light";
+        return GRAY_DARK;
       default:
-        return "gray.main";
+        return GRAY_DARK;
     }
   };
 
@@ -79,11 +84,13 @@ const SocialMediaLinks = () => {
         ariaLabel="Social media links"
         sx={{
           position: { xs: "static", md: "fixed" },
-          bottom: {xs: 32, lg: 40},
-          left: {xs: 16, lg: 60},
+          bottom: { xs: 32, lg: 40 },
+          left: { xs: 16, lg: 60 },
+
           "& .MuiFab-root": {
             boxShadow: `0px 4px 20px 3px ${PRIMARY_DARK}, 0px 6px 10px 5px rgb(0 0 0 / 65%), 0px 1px 18px 0px rgb(0 0 0 / 12%);`,
           },
+
           "& #Socialmedialinks-actions": {
             paddingLeft: { xs: "24px", md: "0px" },
           },
@@ -102,16 +109,22 @@ const SocialMediaLinks = () => {
         {SOCIAL_MEDIA_LINKS.map((action, index) => {
           const { socialMedia, href, icon } = action;
 
-          const bgColor = getBackgroundColor(index)
+          const color = getColor(index);
 
           return (
             <SpeedDialAction
               key={socialMedia}
               icon={icon}
               tooltipTitle={socialMedia}
-              color="secondary.main"
               onClick={() => router.push(href)}
-              sx={{backgroundColor: bgColor}}
+              sx={{
+                backgroundColor: color,
+                "&.MuiFab-root": {
+                  boxShadow: `0px 4px 20px 3px ${color},
+                              0px 6px 10px 5px rgb(0 0 0 / 65%),
+                              0px 1px 18px 0px rgb(0 0 0 / 12%);`,
+                },
+              }}
             />
           );
         })}
