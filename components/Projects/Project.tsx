@@ -56,9 +56,7 @@ const Project = ({ name, description, image, link, index }: Props) => {
       height: "15px",
       left: isIndexEven ? "48%" : "51%",
       top: "-40px",
-      transform: `rotate(45deg) translateX(${
-        isIndexEven ? "-48%" : "-51%"
-      })`,
+      transform: `rotate(45deg) translateX(${isIndexEven ? "-48%" : "-51%"})`,
     },
   };
 
@@ -135,7 +133,12 @@ const Project = ({ name, description, image, link, index }: Props) => {
                   transition: "all 0.25s ease-in-out",
                 }}
               >
-                <Image src={image} layout="fill" alt={name} />
+                <Image
+                  src={image}
+                  layout="fill"
+                  alt={name}
+                  priority
+                />
               </Box>
               {/* -------------------- Image Container --------------------- */}
             </a>
@@ -149,7 +152,7 @@ const Project = ({ name, description, image, link, index }: Props) => {
           variants={contentAnimation}
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true}}
+          viewport={{ once: true }}
           transition={{ duration: 1.25, delay: 0.2 }}
         >
           <Typography
@@ -165,6 +168,7 @@ const Project = ({ name, description, image, link, index }: Props) => {
           <Typography
             variant="body1"
             letterSpacing={0.7}
+            color="#bcbbbb"
             lineHeight={{ xs: 1.75, md: 2 }}
           >
             {description}

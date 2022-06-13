@@ -79,6 +79,7 @@ const Skills = (props: Props) => {
                 >
                   <Typography
                     variant="h5"
+                    component="p"
                     fontFamily="Montserrat, sans-serif"
                     fontWeight="bold"
                     whiteSpace="nowrap"

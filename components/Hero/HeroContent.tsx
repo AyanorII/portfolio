@@ -28,7 +28,7 @@ const HeroContent = () => {
               content: "','",
               color: "#FFF",
               fontSize: "h1.fontSize",
-            }
+            },
           }}
         >
           Ayanori Toyoda
@@ -40,12 +40,13 @@ const HeroContent = () => {
         variant="h6"
         component="p"
         fontWeight="regular"
+        color="#bcbbbb"
         fontFamily="Montserrat, sans-serif"
         maxWidth="50ch"
-        margin={{xs: "0 auto", lg: "0"}}
+        margin={{ xs: "0 auto", lg: "0" }}
       >
-        A front end developer that loves to bring beautiful design into amazing
-        real life projects.
+        A front-end developer that loves to bring beautiful design into amazing
+        real-life projects.
       </Typography>
       {/* -------------------------- Sub Heading -------------------------- */}
       {/* -------------------------- CTA Buttons -------------------------- */}
@@ -64,7 +65,7 @@ const HeroContent = () => {
           color="secondary"
           href="https://github.com/AyanorII"
         >
-          Github
+          GitHub
         </Button>
       </Stack>
       {/* -------------------------- CTA Buttons -------------------------- */}

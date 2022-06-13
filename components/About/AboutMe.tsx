@@ -16,8 +16,7 @@ const AboutMe = () => {
         letterSpacing={0.5}
         whiteSpace="break-spaces"
       >
-        Hello, my name is Ayanori Toyoda, I was born and raised in Brazil and
-        currently based in Saitama, Japan.
+        Hi there, nice to meet you! My name is Ayanori Toyoda, I&apos;m a passionate Brazilian front-end developer based in Saitama, Japan.
       </Typography>
       <Typography
         variant="body1"
