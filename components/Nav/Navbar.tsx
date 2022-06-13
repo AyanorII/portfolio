@@ -1,54 +1,84 @@
-import { AppBar, Container, Stack, Toolbar } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import {
+  AppBar,
+  Container,
+  IconButton,
+  Slide,
+  Stack,
+  Toolbar,
+  useMediaQuery,
+  useScrollTrigger,
+} from "@mui/material";
+import { useState } from "react";
+import { GRAY_MAIN } from "../../styles/Theme";
 import Logo from "../Logo";
-import NavLink from "./NavLink";
+import Drawer from "./Drawer";
+import NavLinks from "./NavLinks";
 
-const LINKS = [
-  {
-    href: "#about",
-    label: "About",
-  },
-  {
-    href: "#projects",
-    label: "Projects",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-];
+function HideOnScroll(props: any) {
+  const { children, window } = props;
 
-const Navbar = () => {
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
+
   return (
-    <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "transparent",
-        backdropFilter: "blur(5px)",
-        borderBottom: 1,
-        borderColor: "#494949",
-        paddingBlock: 2,
-      }}
-    >
-      <Container>
-        <Toolbar>
-          <Logo />
-          <nav>
-            <Stack flexDirection="row" gap={2}>
-              {LINKS.map(({ href, label }, index) => {
-                return (
-                  <NavLink
-                    key={label}
-                    href={href}
-                    label={label}
-                    index={index}
-                  />
-                );
-              })}
-            </Stack>
-          </nav>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+const Navbar = (props: any) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const closeDrawer = () => setMobileOpen(false);
+
+  const isTablet = useMediaQuery("(min-width: 900px)");
+
+  return (
+    <HideOnScroll {...props}>
+      <AppBar
+        sx={{
+          backgroundColor: GRAY_MAIN,
+          backdropFilter: "blur(10px)",
+          borderBottom: 1,
+          borderColor: "#494949",
+          paddingBlock: { md: 2 },
+        }}
+      >
+        <Stack
+          flexDirection={{ md: "row" }}
+          alignItems="center"
+          justifyContent={{ md: "space-between" }}
+        >
+          <Container>
+            <Toolbar sx={{ justifyContent: "end" }}>
+              <Logo />
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ display: { md: "none" } }}
+              >
+                <MenuIcon />
+              </IconButton>
+              {isTablet && <NavLinks closeDrawer={closeDrawer} />}
+            </Toolbar>
+          </Container>
+          <Drawer
+            mobileOpen={mobileOpen}
+            handleDrawerToggle={handleDrawerToggle}
+            closeDrawer={closeDrawer}
+          />
+        </Stack>
+      </AppBar>
+    </HideOnScroll>
   );
 };
 

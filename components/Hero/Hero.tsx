@@ -4,14 +4,20 @@ import ProfileImage from "../ProfileImage";
 import HeroContent from "./HeroContent";
 
 const Hero = () => {
+  const navbarHeight = {
+    xs: "89px",
+    sm: "97px"
+  }
+
   return (
-    <Container>
+    <Container >
       <Stack
+        paddingTop={{xs: navbarHeight.xs, sm: navbarHeight.sm }}
         flexDirection={{ lg: "row-reverse" }}
         justifyContent="center"
         alignItems="center"
         gap={5}
-        minHeight={{ xs: "calc(100vh - 89px)", sm: "calc(100vh - 97px)" }}
+        minHeight="100vh"
       >
         <motion.div
           animate={{ x: ["200%", "-10%", "0%"], rotate: [360, -15, 0] }}
