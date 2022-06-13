@@ -1,7 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
 /* ---------------------------------- Fonts --------------------------------- */
-const HEADING_FONT_FAMILY = "Montserrat Alternates, sans-serif";
 const BODY_FONT_FAMILY = "Montserrat, sans-serif";
 /* ---------------------------------- Fonts --------------------------------- */
 
@@ -52,35 +51,9 @@ let theme = createTheme({
     },
   },
   typography: {
-    h1: {
-      fontFamily: HEADING_FONT_FAMILY,
-    },
-    h2: {
-      fontFamily: HEADING_FONT_FAMILY,
-    },
-    h3: {
-      fontFamily: HEADING_FONT_FAMILY,
-    },
-    h4: {
-      fontFamily: HEADING_FONT_FAMILY,
-    },
-    h5: {
-      fontFamily: HEADING_FONT_FAMILY,
-    },
-    h6: {
-      fontFamily: HEADING_FONT_FAMILY,
-    },
-    body1: {
-      fontFamily: BODY_FONT_FAMILY,
-    },
-    body2: {
-      fontFamily: BODY_FONT_FAMILY,
-    },
-    button: {
-      fontFamily: BODY_FONT_FAMILY,
-    },
     allVariants: {
       color: CONTRAST_TEXT,
+      fontFamily: BODY_FONT_FAMILY,
     }
   },
 });
