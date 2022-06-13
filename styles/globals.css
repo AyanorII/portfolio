@@ -26,4 +26,18 @@ a {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scrollbar-color: #883997 #1b1b1b;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #883997;
+  border-radius: 10px;
 }
