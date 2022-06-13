@@ -64,13 +64,13 @@ const Projects = () => {
         ...centerVerticalBarStyles,
         ...verticalBarTopTipStyles,
         paddingBottom: "5.75rem",
-        paddingTop: { xs: "5rem", lg: "1rem" },
+        paddingTop: { md: "5rem", lg: "1rem" },
         overflow: "visible",
       }}
     >
       <Grid
         container
-        gap={{ xs: 10, md: 10 }}
+        gap={{ xs: 2, sm: 5, md: 10 }}
         marginTop={{ xs: 5, lg: 18 }}
         justifyContent="center"
         position="relative"
