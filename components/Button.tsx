@@ -1,16 +1,25 @@
-import { Typography } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
+import { CircularProgress, Typography } from "@mui/material";
 import MuiButton from "@mui/material/Button";
 import React from "react";
-import { PRIMARY_DARK, SECONDARY_DARK, TERTIARY_DARK } from "../styles/Theme";
+import {
+  PRIMARY_DARK,
+  SECONDARY_DARK,
+  TERTIARY_DARK,
+  TERTIARY_LIGHT,
+} from "../styles/Theme";
 
 type Props = {
   children: React.ReactNode;
   variant: "text" | "outlined" | "contained";
   color: "primary" | "secondary" | "tertiary";
   href?: string;
+  type?: "submit" | "reset" | "button";
+  loading?: boolean;
+  fullWidth?: boolean;
 };
 
-const Button = ({ children, variant, color, href }: Props) => {
+const Button = ({ children, variant, fullWidth, color, href, type, loading }: Props) => {
   let boxShadowColor:
     | typeof PRIMARY_DARK
     | typeof SECONDARY_DARK
@@ -75,13 +84,41 @@ const Button = ({ children, variant, color, href }: Props) => {
     },
   };
 
-  return (
-    <MuiButton variant={variant} color={color} href={href} sx={buttonStyles}>
-      <Typography variant="inherit" component="span">
+  if (loading) {
+    return (
+      <LoadingButton
+        variant={variant}
+        color={color}
+        sx={{
+          ...buttonStyles,
+          "&.MuiLoadingButton-root.Mui-disabled": {
+            backgroundColor: TERTIARY_LIGHT,
+          },
+        }}
+        loadingIndicator={
+          <CircularProgress size={24} sx={{ color: TERTIARY_DARK }} />
+        }
+        loading={loading}
+      >
         {children}
-      </Typography>
-    </MuiButton>
-  );
+      </LoadingButton>
+    );
+  } else {
+    return (
+      <MuiButton
+        variant={variant}
+        color={color}
+        href={href}
+        type={type ? type : "button"}
+        sx={buttonStyles}
+        fullWidth={fullWidth}
+      >
+        <Typography variant="inherit" component="span">
+          {children}
+        </Typography>
+      </MuiButton>
+    );
+  }
 };
 
 export default Button;
