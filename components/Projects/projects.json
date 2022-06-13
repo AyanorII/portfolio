@@ -1,7 +1,7 @@
 [
   {
     "name": "Audiophile E-commerce",
-    "description": "A multipage ecommerce website using React, react-router-dom, react-hook-form and styled-components. Working with states proved to be a real challenge in this project.",
+    "description": "A multi-page e-commerce website using React, react-router-dom, react-hook-form and styled-components. Working with states proved to be a real challenge in this project.",
     "image": "/projects/audiophile.png",
     "link": "https://ayanori-toyoda.com/audiophile-ecommerce/#/"
   },
@@ -13,7 +13,7 @@
   },
   {
     "name": "Entertainment App",
-    "description": "This web app built using TypeScript, Next.js, Material UI and Firebase fetches info about the current movies and TV series and allows users to bookmak them. First time using Firebase to handle the authentication and database.",
+    "description": "Web app built using TypeScript, Next.js, Material UI and Firebase. Gets info about the current movies and TV series and allows users to bookmark them",
     "image": "/projects/entertainment.png",
     "link": "https://entertainment-app-ayanori.vercel.app/"
   },
@@ -31,7 +31,7 @@
   },
   {
     "name": "Go-Japan Website",
-    "description": "First experience with Next.js and SEO, this website was built to the Wayfarer Hotels and scrapes news about Japan’s border status and shows information about the company hotels and careers.",
+    "description": "Website built using with Next.js and SEO to Wayfarer Hotels and scrapes news about Japan’s border status and shows information about the company hotels and careers.",
     "image": "/projects/go-japan.png",
     "link": "http://go-japan.xyz/"
   }
