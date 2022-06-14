@@ -78,23 +78,25 @@ const SocialMediaLinks = () => {
     }
   };
 
+  const speedDialStyles = {
+    position: { xs: "static", md: "fixed" },
+    bottom: { xs: 32, lg: 40 },
+    left: { xs: 16, lg: 60 },
+
+    "& .MuiFab-root": {
+      boxShadow: `0px 4px 20px 3px ${PRIMARY_DARK}, 0px 6px 10px 5px rgb(0 0 0 / 65%), 0px 1px 18px 0px rgb(0 0 0 / 12%);`,
+    },
+
+    "& #Socialmedialinks-actions": {
+      paddingLeft: { xs: "24px", md: "0px" },
+    },
+  };
+
   return (
     <ClickAwayListener onClickAway={() => setOpen(false)}>
       <SpeedDial
         ariaLabel="Social media links"
-        sx={{
-          position: { xs: "static", md: "fixed" },
-          bottom: { xs: 32, lg: 40 },
-          left: { xs: 16, lg: 60 },
-
-          "& .MuiFab-root": {
-            boxShadow: `0px 4px 20px 3px ${PRIMARY_DARK}, 0px 6px 10px 5px rgb(0 0 0 / 65%), 0px 1px 18px 0px rgb(0 0 0 / 12%);`,
-          },
-
-          "& #Socialmedialinks-actions": {
-            paddingLeft: { xs: "24px", md: "0px" },
-          },
-        }}
+        sx={speedDialStyles}
         icon={
           <SpeedDialIcon
             onClick={handleOpen}

@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import type { NextPage } from "next";
 import AboutSection from "../components/About/AboutSection";
 import Contact from "../components/Contact/Contact";
@@ -7,6 +8,8 @@ import ProjectsSection from "../components/Projects/ProjectsSection";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
 const Home: NextPage = () => {
+  const isMobile = useMediaQuery("(max-width:899px)");
+
   return (
     <>
       <Head />
@@ -14,7 +17,7 @@ const Home: NextPage = () => {
       <AboutSection />
       <ProjectsSection />
       <Contact />
-      <SocialMediaLinks />
+      {!isMobile && <SocialMediaLinks />}
     </>
   );
 };
