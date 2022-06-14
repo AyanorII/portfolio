@@ -17,7 +17,7 @@ const Head = () => {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/logo.png"/>
-
+      <link rel="preload" as="font" />
       {/* ------------------------ Primary Meta Tags ----------------------- */}
 
       {/* ---------------------- Open Graph / Facebook --------------------- */}
