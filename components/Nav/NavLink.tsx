@@ -25,8 +25,22 @@ const NavLink = ({ href, label, index }: Props) => {
       break;
   }
 
+  const isMobile = useMediaQuery("(max-width:899px)");
+  const isTablet = useMediaQuery("(max-width:1199px)");
+
+  let variant: "h6" | "h5" | "h4" | "h3";
+
+  if (isMobile) {
+    variant = "h3";
+  } else if (isTablet) {
+    variant = "h5";
+  } else {
+    variant = "h6";
+  }
+
   const linkStyles = {
     position: "relative",
+    fontSize: isMobile ? "2rem !important" : "auto",
 
     "&:after": {
       content: "''",
@@ -43,19 +57,6 @@ const NavLink = ({ href, label, index }: Props) => {
       width: "100%",
     },
   };
-
-  const isMobile = useMediaQuery("(max-width:899px)");
-  const isTablet = useMediaQuery("(max-width:1199px)");
-
-  let variant: "h6" | "h5" | "h4" | "h3";
-
-  if (isMobile) {
-    variant = "h3";
-  } else if (isTablet) {
-    variant = "h5";
-  } else {
-    variant = "h6";
-  }
 
   return (
     <Link href={href} key={label} passHref>

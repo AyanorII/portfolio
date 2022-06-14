@@ -11,7 +11,7 @@ const HeroContent = () => {
     >
       {/* -------------------------- Main Heading -------------------------- */}
       <Typography
-        variant="h2"
+        variant="h4"
         component="h1"
         display="block"
         fontWeight="medium"
@@ -21,7 +21,7 @@ const HeroContent = () => {
           variant="h1"
           component="p"
           fontWeight="bold"
-          fontFamily="Montserrat Alternates, sans-serif"
+          fontFamily="Montserrat, sans-serif"
           color="primary"
           sx={{
             textShadow: `0px 0px 60px ${PRIMARY_LIGHT}30`,

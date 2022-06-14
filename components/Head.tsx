@@ -16,6 +16,7 @@ const Head = () => {
         content="HTML, CSS, JavaScript, React, Next.js, TypeScript, Ruby, Ruby on Rails, Web Development, Front-end developer"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="/logo.png"/>
 
       {/* ------------------------ Primary Meta Tags ----------------------- */}
 
@@ -32,7 +33,7 @@ const Head = () => {
       />
       <meta
         property="og:image"
-        content="https://i.postimg.cc/Ghw58pSF/og-image.png"
+        content="https://i.postimg.cc/wjg65ypX/og-image.png"
       />
       {/* ----------------------- Open Graph / Facebook -------------------- */}
 
@@ -49,7 +50,7 @@ const Head = () => {
       />
       <meta
         property="twitter:image"
-        content="https://i.postimg.cc/Ghw58pSF/og-image.png"
+        content="https://i.postimg.cc/wjg65ypX/og-image.png"
       />
       {/* ----------------------------- Twitter ---------------------------- */}
     </NextHead>

@@ -1,5 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
 import {
+  Box,
   Container,
   Drawer as MuiDrawer,
   IconButton,
@@ -7,6 +8,7 @@ import {
   Toolbar,
   useMediaQuery,
 } from "@mui/material";
+import Logo from "../Logo";
 import SocialMediaLinks from "../SocialMediaLinks";
 import NavLinks from "./NavLinks";
 
@@ -49,6 +51,9 @@ const Drawer = ({ mobileOpen, handleDrawerToggle, closeDrawer }: Props) => {
           </IconButton>
         </Toolbar>
         <Stack height="calc(90vh - 64px)" justifyContent="center" gap={5}>
+          <Box alignSelf="center" marginBottom={2}>
+            <Logo light big/>
+          </Box>
           <NavLinks closeDrawer={closeDrawer} />
           <SocialMediaLinks />
         </Stack>
