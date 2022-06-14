@@ -13,7 +13,7 @@
          url('/fonts/Gaoel.woff') format('woff'),
           url('/fonts/Gaoel.ttf') format('truetype'),
           url('/fonts/Gaoel.svg') format('svg');
-
+    font-display: swap;
     font-weight: normal;
 
 }
