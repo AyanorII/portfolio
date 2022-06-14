@@ -44,7 +44,7 @@ const SectionTitle = ({
       variant="h3"
       component="h2"
       display="inline"
-      fontFamily="Montserrat Alternates, sans-serif"
+      fontFamily="Gaoel, sans-serif"
       whiteSpace="nowrap"
       sx={{
         position: "relative",

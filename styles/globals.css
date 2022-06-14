@@ -7,6 +7,17 @@
 /* Mulish Font */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
 
+@font-face {
+    font-family: 'Gaoel';
+    src: local('Gaoel'),
+         url('/fonts/Gaoel.woff') format('woff'),
+          url('/fonts/Gaoel.ttf') format('truetype'),
+          url('/fonts/Gaoel.svg') format('svg');
+
+    font-weight: normal;
+
+}
+
 html,
 body {
   overflow-x: hidden;

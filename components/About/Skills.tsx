@@ -53,7 +53,7 @@ const Skills = (props: Props) => {
           textAlign="center"
           color="primary"
           fontWeight="500"
-          fontFamily="Montserrat"
+          fontFamily="Gaoel, sans-serif"
           sx={{
             background: `-webkit-linear-gradient(${PRIMARY_MAIN}, ${PRIMARY_LIGHT})`,
             WebkitBackgroundClip: "text",

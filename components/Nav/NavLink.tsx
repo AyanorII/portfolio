@@ -63,6 +63,7 @@ const NavLink = ({ href, label, index }: Props) => {
         variant={variant}
         component="a"
         fontWeight="normal"
+        fontFamily="Gaoel, sans-serif"
         color={linkBottomColor}
         sx={linkStyles}
       >
