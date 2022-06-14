@@ -1,7 +1,6 @@
 import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import Button from "../Button";
 
 type Props = {
@@ -118,31 +117,29 @@ const Project = ({ name, description, image, link, index }: Props) => {
           transition={{ duration: 1.25 }}
           viewport={{ once: true }}
         >
-          <Link href={link} passHref style={{ width: "100%" }}>
-            <a target="_blank">
-              {/* -------------------- Image Container --------------------- */}
-              <Box
-                position="relative"
-                width="100%"
-                height="65vw"
-                borderRadius="10px"
-                overflow="hidden"
-                maxHeight={{ xs: "330px", md: "300px", lg: "375px" }}
-                sx={{
-                  boxShadow: "0px 0px 30px 10px rgba(0, 0, 0, 0.3)",
-                  transition: "all 0.25s ease-in-out",
-                }}
-              >
-                <Image
-                  src={image}
-                  layout="fill"
-                  alt={name}
-                  priority
-                />
-              </Box>
-              {/* -------------------- Image Container --------------------- */}
-            </a>
-          </Link>
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            style={{ width: "100%" }}
+          >
+            {/* -------------------- Image Container --------------------- */}
+            <Box
+              position="relative"
+              width="100%"
+              height="65vw"
+              borderRadius="10px"
+              overflow="hidden"
+              maxHeight={{ xs: "330px", md: "300px", lg: "375px" }}
+              sx={{
+                boxShadow: "0px 0px 30px 10px rgba(0, 0, 0, 0.3)",
+                transition: "all 0.25s ease-in-out",
+              }}
+            >
+              <Image src={image} layout="fill" alt={name} priority />
+            </Box>
+            {/* -------------------- Image Container --------------------- */}
+          </a>
         </motion.div>
       </Grid>
       {/* -------------------------- Image ----------------------------- */}

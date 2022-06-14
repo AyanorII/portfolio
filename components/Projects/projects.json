@@ -3,13 +3,13 @@
     "name": "Audiophile E-commerce",
     "description": "A multi-page e-commerce website using React, react-router-dom, react-hook-form and styled-components. Working with states proved to be a real challenge in this project.",
     "image": "/projects/audiophile.png",
-    "link": "https://ayanori-toyoda.com/audiophile-ecommerce/#/"
+    "link": "https://audiophile-ecommerce-ayanori.vercel.app/"
   },
   {
     "name": "Designo Website",
     "description": "A 7-page, fully responsive project for a fictional company. This was my first time using TypeScript and also was my first contact with a strong typed language.",
     "image": "/projects/designo.png",
-    "link": "https://ayanori-toyoda.com/designo-react-typescript/"
+    "link": "https://designo-react-typescript.vercel.app/"
   },
   {
     "name": "Entertainment App",
@@ -27,12 +27,12 @@
     "name": "Photosnap Website",
     "description": "This is a marketing site for a fictional photo-sharing app and was a great challenge to understand CSS Grid.",
     "image": "/projects/photosnap1.png",
-    "link": "https://ayanori-toyoda.com/photosnap-website/"
+    "link": "https://ayanorii.github.io/photosnap-website/"
   },
   {
     "name": "Go-Japan Website",
     "description": "Website built using with Next.js and SEO to Wayfarer Hotels and scrapes news about Japan’s border status and shows information about the company hotels and careers.",
     "image": "/projects/go-japan.png",
-    "link": "http://go-japan.xyz/"
+    "link": "https://go-japan.xyz/"
   }
 ]
