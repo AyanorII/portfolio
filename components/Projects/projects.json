@@ -7,31 +7,31 @@
   },
   {
     "name": "Designo Website",
-    "description": "A 7-page, fully responsive project for a fictional company. This was my first time using TypeScript and also was my first contact with a strong typed language.",
+    "description": "A 7-page, fully responsive project for a fictional company. This was my first time using TypeScript and my first contact with a strongly typed language. It was a good opportunity to learn the benefits of the language over JavaScript.",
     "image": "/projects/designo.png",
     "link": "https://designo-react-typescript.vercel.app/"
   },
   {
     "name": "Entertainment App",
-    "description": "Web app built using TypeScript, Next.js, Material UI and Firebase. Gets info about the current movies and TV series and allows users to bookmark them",
+    "description": "Web app built using TypeScript, Next.js, Material UI, and Firebase. Gets info about the current movies and TV series and allows users to bookmark them.",
     "image": "/projects/entertainment.png",
     "link": "https://entertainment-app-ayanori.vercel.app/"
   },
   {
     "name": "Invoice App",
-    "description": "Full stack app built with the MERN stack (MongoDB, Express.js, React and Node.js) users can create, delete, edit and read invoices.",
+    "description": "A full-stack app built with the MERN stack (MongoDB, Express.js, React, and Node.js) where users can create, delete, edit and read invoices.",
     "image": "/projects/invoice.png",
     "link": "https://ayanori-invoice-app-client.herokuapp.com/"
   },
   {
     "name": "Photosnap Website",
-    "description": "This is a marketing site for a fictional photo-sharing app and was a great challenge to understand CSS Grid.",
+    "description": "A multi-page marketing website for a fictional photo-sharing app. Building this project helped me understand a lot more about CSS Grid.",
     "image": "/projects/photosnap1.png",
     "link": "https://ayanorii.github.io/photosnap-website/"
   },
   {
     "name": "Go-Japan Website",
-    "description": "Website built using with Next.js and SEO to Wayfarer Hotels and scrapes news about Japan’s border status and shows information about the company hotels and careers.",
+    "description": "Website built using Next.js to Wayfarer Hotels and scrapes news about Japan’s border status and shows information about the company hotels and careers.",
     "image": "/projects/go-japan.png",
     "link": "https://go-japan.xyz/"
   }

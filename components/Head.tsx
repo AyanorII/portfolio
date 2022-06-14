@@ -8,10 +8,13 @@ const Head = () => {
       <meta name="title" content="Ayanori Toyoda - Front-End Developer" />
       <meta
         name="description"
-        content="Hi there, I'm Ayanori Toyoda, a passionate Brazilian front-end developer based in Saitama, Japan that loves to bring beautiful design into amazing real-life projects."
+        content="Hi there, my name is Ayanori Toyoda, a passionate Brazilian front-end developer based in Saitama, Japan, that loves to bring beautiful design into amazing real-life projects."
       />
       <meta name="author" content="Ayanori Toyoda" />
-      <meta name="keywords" content="HTML, CSS, JavaScript, React, Next.js, TypeScript, Ruby, Ruby on Rails, Web Development, Front-end developer" />
+      <meta
+        name="keywords"
+        content="HTML, CSS, JavaScript, React, Next.js, TypeScript, Ruby, Ruby on Rails, Web Development, Front-end developer"
+      />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       {/* ------------------------ Primary Meta Tags ----------------------- */}
@@ -25,7 +28,7 @@ const Head = () => {
       />
       <meta
         property="og:description"
-        content="Hi there, I'm Ayanori Toyoda, a passionate Brazilian front-end developer based in Saitama, Japan that loves to bring beautiful design into amazing real-life projects."
+        content="Hi there, my name is Ayanori Toyoda, a passionate Brazilian front-end developer based in Saitama, Japan, that loves to bring beautiful design into amazing real-life projects."
       />
       <meta
         property="og:image"
@@ -42,7 +45,7 @@ const Head = () => {
       />
       <meta
         property="twitter:description"
-        content="Hi there, I'm Ayanori Toyoda, a passionate Brazilian front-end developer based in Saitama, Japan that loves to bring beautiful design into amazing real-life projects."
+        content="Hi there, my name is Ayanori Toyoda, a passionate Brazilian front-end developer based in Saitama, Japan, that loves to bring beautiful design into amazing real-life projects."
       />
       <meta
         property="twitter:image"
