@@ -58,7 +58,7 @@ const Navbar = (props: any) => {
         >
           <Container>
             <Toolbar sx={{ justifyContent: "end" }}>
-              <Logo />
+              <Logo fullWidth />
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
