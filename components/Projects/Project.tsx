@@ -136,7 +136,14 @@ const Project = ({ name, description, image, link, index }: Props) => {
                 transition: "all 0.25s ease-in-out",
               }}
             >
-              <Image src={image} layout="fill" alt={name} priority />
+              <Image
+                src={image}
+                layout="fill"
+                alt={name}
+                priority
+                objectFit="cover"
+                objectPosition="center"
+              />
             </Box>
             {/* -------------------- Image Container --------------------- */}
           </a>
