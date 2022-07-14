@@ -97,9 +97,9 @@ const SocialMediaLinks = () => {
       <SpeedDial
         ariaLabel="Social media links"
         sx={speedDialStyles}
+        onClick={handleOpen}
         icon={
           <SpeedDialIcon
-            onClick={handleOpen}
             icon={<ConnectWithoutContactIcon />}
             openIcon={<CloseIcon />}
           />

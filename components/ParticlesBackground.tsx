@@ -11,7 +11,7 @@ const ParticlesBackground = () => {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fps_limit: 60,
+        fps_limit: 30,
         fullScreen: {
           enable: true,
           zIndex: -1,
@@ -43,10 +43,10 @@ const ParticlesBackground = () => {
             enable: true,
             outMode: "out",
             random: false,
-            speed: 0.5,
+            speed: 0.3,
             straight: false,
           },
-          number: { density: { enable: true, area: 800 }, value: 80 },
+          number: { density: { enable: true, area: 800 }, value: 50 },
           opacity: { value: 0.1 },
           shape: { type: "circle" },
           size: { random: true, value: 5 },
