@@ -1,4 +1,12 @@
-import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Grid,
+  IconButton,
+  Stack,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Project as IProject, ProjectStack } from "../../lib/interfaces";
@@ -159,6 +167,7 @@ const Project = ({ project, index }: Props) => {
           viewport={{ once: true }}
           transition={{ duration: 1.25, delay: 0.2 }}
         >
+          {/* ------------------------ Project Name ------------------------ */}
           <Typography
             variant="h4"
             component="h3"
@@ -169,6 +178,8 @@ const Project = ({ project, index }: Props) => {
           >
             {name}
           </Typography>
+          {/* ------------------------ Project Name ------------------------ */}
+          {/* --------------------- Project Description -------------------- */}
           <Typography
             variant="body1"
             letterSpacing={0.7}
@@ -177,20 +188,26 @@ const Project = ({ project, index }: Props) => {
           >
             {description}
           </Typography>
+          {/* --------------------- Project Description -------------------- */}
+          {/* ------------------------- Tech Stack ------------------------ */}
           <Stack gap={2} flexDirection="row" mt={2}>
             {techStack?.map(({ tech, icon }: ProjectStack) => {
               return (
-                <Image
-                  key={tech}
-                  src={icon}
-                  width={32}
-                  height={32}
-                  alt={tech}
-                  objectFit="cover"
-                />
+                <Tooltip key={tech} title={tech} arrow>
+                  <IconButton>
+                    <Image
+                      src={icon}
+                      width={32}
+                      height={32}
+                      alt={tech}
+                      objectFit="cover"
+                    />
+                  </IconButton>
+                </Tooltip>
               );
             })}
           </Stack>
+          {/* ------------------------- Tech Stack ------------------------ */}
           <Stack
             margin={{ xs: "2.5rem auto 0", lg: "2.5rem 0 0" }}
             justifyContent="center"
