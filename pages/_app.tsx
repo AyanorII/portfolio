@@ -1,4 +1,4 @@
-import { ThemeProvider as MuiThemeProvider } from "@mui/material";
+import { ThemeProvider as MuiThemeProvider, useMediaQuery } from "@mui/material";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { ThemeProvider as SCThemeProvider } from "styled-components";
@@ -9,6 +9,8 @@ import "../styles/globals.css";
 import theme from "../styles/Theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const isTablet = useMediaQuery('(min-width: 768px)')
+
   return (
     <>
       <Script
@@ -29,7 +31,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <MuiThemeProvider theme={theme}>
         <SCThemeProvider theme={theme}>
           <>
-            <ParticlesBackground />
+
+            {isTablet && <ParticlesBackground />}
             <Navbar />
             <Component {...pageProps} />
             <Footer />

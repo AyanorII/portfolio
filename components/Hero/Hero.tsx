@@ -4,15 +4,15 @@ import ProfileImage from "../ProfileImage";
 import HeroContent from "./HeroContent";
 
 const Hero = () => {
-  const navbarHeight = {
-    xs: "89px",
-    sm: "97px"
+  enum NAVBAR_HEIGHT {
+    XS = "89px",
+    SM = "97px",
   }
 
   return (
-    <Container >
+    <Container>
       <Stack
-        paddingTop={{xs: navbarHeight.xs, sm: navbarHeight.sm }}
+        paddingTop={{ xs: NAVBAR_HEIGHT.XS, sm: NAVBAR_HEIGHT.SM }}
         flexDirection={{ lg: "row-reverse" }}
         justifyContent="center"
         alignItems="center"
