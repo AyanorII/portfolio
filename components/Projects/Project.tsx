@@ -1,17 +1,17 @@
 import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Project as IProject, ProjectStack } from "../../lib/interfaces";
 import Button from "../Button";
 
 type Props = {
-  name: string;
-  description: string;
-  image: string;
-  link: string;
+  project: IProject;
   index: number;
 };
 
-const Project = ({ name, description, image, link, index }: Props) => {
+const Project = ({ project, index }: Props) => {
+  const { name, description, image, link, techStack } = project;
+
   const isTablet = useMediaQuery("(min-width: 900px)");
 
   const isIndexEven = index % 2 === 0;
@@ -177,6 +177,20 @@ const Project = ({ name, description, image, link, index }: Props) => {
           >
             {description}
           </Typography>
+          <Stack gap={2} flexDirection="row" mt={2}>
+            {techStack?.map(({ tech, icon }: ProjectStack) => {
+              return (
+                <Image
+                  key={tech}
+                  src={icon}
+                  width={32}
+                  height={32}
+                  alt={tech}
+                  objectFit="cover"
+                />
+              );
+            })}
+          </Stack>
           <Stack
             margin={{ xs: "2.5rem auto 0", lg: "2.5rem 0 0" }}
             justifyContent="center"

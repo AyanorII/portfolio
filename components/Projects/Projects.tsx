@@ -91,10 +91,7 @@ const Projects = () => {
               }}
             >
               <Project
-                name={name}
-                description={description}
-                image={image}
-                link={link}
+                project={project}
                 index={index}
               />
             </Grid>
