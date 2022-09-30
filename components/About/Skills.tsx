@@ -1,47 +1,11 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { PRIMARY_DARK, PRIMARY_LIGHT, PRIMARY_MAIN } from "../../styles/Theme";
+import skills from "./skills.json";
 
 type Props = {};
 
 const Skills = (props: Props) => {
-  const skills = [
-    {
-      name: "HTML",
-      icon: "/icons/html-5.png",
-    },
-    {
-      name: "CSS",
-      icon: "/icons/css-3.png",
-    },
-    {
-      name: "JavaScript",
-      icon: "/icons/js.png",
-    },
-    {
-      name: "React",
-      icon: "/icons/react.png",
-    },
-    {
-      name: "Next.js",
-      icon: "/icons/nextjs.png",
-    },
-
-    {
-      name: "TypeScript",
-      icon: "/icons/typescript.png",
-    },
-    {
-      name: "Ruby",
-      icon: "/icons/ruby.png",
-    },
-
-    {
-      name: "Ruby on Rails",
-      icon: "/icons/rails.png",
-    },
-  ];
-
   return (
     <Container>
       <Box
