@@ -46,8 +46,7 @@ const HeroContent = () => {
         maxWidth="50ch"
         margin={{ xs: "0 auto", lg: "0" }}
       >
-        A front-end developer that loves to bring beautiful design into amazing
-        real-life projects.
+        A full-stack developer that loves to transform amazing ideas into beautiful projects.
       </Typography>
       {/* -------------------------- Sub Heading -------------------------- */}
       {/* -------------------------- CTA Buttons -------------------------- */}
