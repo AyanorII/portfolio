@@ -126,6 +126,7 @@ const Project = ({ project, index }: Props) => {
           viewport={{ once: true }}
         >
           <a
+
             href={link}
             target="_blank"
             rel="noreferrer"

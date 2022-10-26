@@ -36,5 +36,9 @@
   {
     "name": "NestJS",
     "icon": "/icons/nestjs.png"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "/icons/postgresql.webp"
   }
 ]

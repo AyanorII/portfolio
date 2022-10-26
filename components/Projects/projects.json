@@ -24,6 +24,42 @@
     ]
   },
   {
+    "name": "Kanban",
+    "description": "A full-stack app built using NestJS, PostgreSQL and Prisma as the ORM for the backend, and Next.js with Material UI for the frontend. Firebase is also used for authentication.",
+    "image": "/projects/kanban.png",
+    "link": "https://kanban-delta.vercel.app/",
+    "techStack": [
+      {
+        "tech": "Next.js",
+        "icon": "/icons/nextjs.png"
+      },
+      {
+        "tech": "TypeScript",
+        "icon": "/icons/typescript.png"
+      },
+      {
+        "tech": "Material UI",
+        "icon": "/icons/material-ui.png"
+      },
+      {
+        "tech": "NestJS",
+        "icon": "/icons/nestjs.png"
+      },
+      {
+        "tech": "PostgreSQL",
+        "icon": "/icons/postgresql.webp"
+      },
+      {
+        "tech": "Prisma",
+        "icon": "/icons/prisma.png"
+      },
+      {
+        "tech": "Firebase",
+        "icon": "/icons/firebase.png"
+      }
+    ]
+  },
+  {
     "name": "Designo Website",
     "description": "A 7-page, fully responsive project for a fictional company. This was my first time using TypeScript and my first contact with a strongly typed language. It was a good opportunity to learn the benefits of the language over JavaScript.",
     "image": "/projects/designo.png",

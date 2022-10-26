@@ -77,7 +77,7 @@ const Projects = () => {
         sx={{}}
       >
         {projects.map((project: Project, index: number) => {
-          const { name, description, image, link } = project;
+          const { name } = project;
 
           return (
             <Grid
