@@ -17,7 +17,7 @@ const AboutMe = () => {
         whiteSpace="break-spaces"
       >
         Hi there, nice to meet you! My name is Ayanori Toyoda, a passionate
-        Brazilian front-end developer based in Saitama, Japan.
+        Brazilian full-stack developer based in Saitama, Japan.
       </Typography>
       <Typography
         variant="body1"
