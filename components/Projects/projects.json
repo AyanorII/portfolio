@@ -25,7 +25,7 @@
   },
   {
     "name": "Kanban",
-    "description": "A full-stack app built using NestJS, PostgreSQL and Prisma as the ORM for the backend, and Next.js with Material UI for the frontend. Firebase is also used for authentication.",
+    "description": "A full-stack task-management app built using NestJS, PostgreSQL and Prisma as the ORM for the backend, and Next.js with Material UI for the frontend. Firebase is also used for authentication.",
     "image": "/projects/kanban.png",
     "link": "https://kanban-delta.vercel.app/",
     "techStack": [
