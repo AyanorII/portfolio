@@ -1,5 +1,8 @@
+import CodeIcon from "@mui/icons-material/Code";
+import LinkIcon from "@mui/icons-material/Link";
 import {
   Box,
+  Button,
   Grid,
   IconButton,
   Stack,
@@ -10,7 +13,6 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Project as IProject, ProjectStack } from "../../lib/interfaces";
-import Button from "../Button";
 
 type Props = {
   project: IProject;
@@ -18,7 +20,7 @@ type Props = {
 };
 
 const Project = ({ project, index }: Props) => {
-  const { name, description, image, link, techStack } = project;
+  const { name, description, image, link, techStack, sourceCode } = project;
 
   const isTablet = useMediaQuery("(min-width: 900px)");
 
@@ -126,7 +128,6 @@ const Project = ({ project, index }: Props) => {
           viewport={{ once: true }}
         >
           <a
-
             href={link}
             target="_blank"
             rel="noreferrer"
@@ -210,12 +211,44 @@ const Project = ({ project, index }: Props) => {
           </Stack>
           {/* ------------------------- Tech Stack ------------------------ */}
           <Stack
+            flexDirection="row"
+            gap={{ xs: 2, sm: 3 }}
             margin={{ xs: "2.5rem auto 0", lg: "2.5rem 0 0" }}
-            justifyContent="center"
-            maxWidth={{ xs: "100%", sm: "50%" }}
+            justifyContent={{ xs: "space-around", sm: "center" }}
+            alignItems="center"
           >
-            <Button variant="contained" color="secondary" href={link}>
-              View Project
+            <Button
+              variant="contained"
+              color="secondary"
+              href={link}
+              startIcon={<LinkIcon />}
+              sx={{ flexGrow: 1 }}
+            >
+              View
+              <Typography
+                component="span"
+                fontWeight="inherit"
+                display={{ xs: "none", sm: "inline" }}
+                sx={{ marginLeft: 0.5 }}
+              >
+                Project
+              </Typography>
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              href={sourceCode}
+              startIcon={<CodeIcon />}
+            >
+              Source{" "}
+              <Typography
+                component="span"
+                fontWeight="inherit"
+                display={{ xs: "none", sm: "inline" }}
+                sx={{ marginLeft: 0.5 }}
+              >
+                Code
+              </Typography>
             </Button>
           </Stack>
         </motion.div>

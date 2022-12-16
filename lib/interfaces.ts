@@ -9,4 +9,5 @@ export interface Project {
   image: string;
   link: string;
   techStack?: ProjectStack[];
+  sourceCode: string;
 }

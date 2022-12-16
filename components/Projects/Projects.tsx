@@ -1,13 +1,7 @@
 import { Box, Grid, useMediaQuery } from "@mui/material";
+import { Project as IProject } from "../../lib/interfaces";
 import Project from "./Project";
 import projects from "./projects.json";
-
-type Project = {
-  name: string;
-  description: string;
-  image: string;
-  link: string;
-};
 
 const Projects = () => {
   const isTablet = useMediaQuery("(min-width: 900px)");
@@ -76,7 +70,7 @@ const Projects = () => {
         position="relative"
         sx={{}}
       >
-        {projects.map((project: Project, index: number) => {
+        {projects.map((project: IProject, index: number) => {
           const { name } = project;
 
           return (
@@ -90,10 +84,7 @@ const Projects = () => {
                 width: { lg: "100%" },
               }}
             >
-              <Project
-                project={project}
-                index={index}
-              />
+              <Project project={project} index={index} />
             </Grid>
           );
         })}
