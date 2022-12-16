@@ -40,5 +40,9 @@
   {
     "name": "PostgreSQL",
     "icon": "/icons/postgresql.webp"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "/icons/mongodb.webp"
   }
 ]

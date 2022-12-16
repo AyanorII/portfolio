@@ -125,25 +125,25 @@
   },
   {
     "name": "Invoice App",
-    "description": "A full-stack app built with the MERN stack (MongoDB, Express.js, React, and Node.js) where users can create, delete, edit and read invoices.",
+    "description": "A full-stack app built with Next.js, MaterialUI, NestJS and MongoDB where users can create, delete, edit and read invoices.",
     "image": "/projects/invoice.png",
-    "link": "https://ayanori-invoice-app-client.herokuapp.com/",
+    "link": "https://invoice-nextjs.vercel.app/",
     "techStack": [
+      {
+        "tech": "Next.js",
+        "icon": "/icons/nextjs.png"
+      },
+      {
+        "tech": "Material UI",
+        "icon": "/icons/material-ui.png"
+      },
+      {
+        "tech": "NestJS",
+        "icon": "/icons/nestjs.png"
+      },
       {
         "tech": "MongoDB",
         "icon": "/icons/mongodb.webp"
-      },
-      {
-        "tech": "Express",
-        "icon": "/icons/express.png"
-      },
-      {
-        "tech": "React",
-        "icon": "/icons/react.png"
-      },
-      {
-        "tech": "Node.js",
-        "icon": "/icons/node-js.png"
       }
     ]
   },
