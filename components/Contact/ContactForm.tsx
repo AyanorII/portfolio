@@ -1,17 +1,16 @@
+import { LoadingButton } from '@mui/lab';
 import {
   Alert,
   Container,
   Grid,
   Snackbar,
-  Stack,
-  TextField,
+  Stack, TextField,
   Typography,
-  useMediaQuery,
+  useMediaQuery
 } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import Button from "../Button";
 
 type Props = {};
 
@@ -202,7 +201,7 @@ const ContactForm = (props: Props) => {
           {/* ----------------------- Message -------------------------- */}
           <Grid item xs={12} marginTop={3} justifySelf={{ sm: "end" }}>
             <Stack flexDirection="row" justifyContent="end">
-              <Button
+              <LoadingButton
                 loading={isSubmitting}
                 type="submit"
                 color="tertiary"
@@ -210,7 +209,7 @@ const ContactForm = (props: Props) => {
                 fullWidth={isMobile}
               >
                 Submit
-              </Button>
+              </LoadingButton>
             </Stack>
           </Grid>
         </Grid>

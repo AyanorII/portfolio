@@ -10,7 +10,7 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import { useState } from "react";
-import { GRAY_MAIN } from "../../styles/Theme";
+import { GRAY } from "../../styles/Theme";
 import Logo from "../Logo";
 import Drawer from "./Drawer";
 import NavLinks from "./NavLinks";
@@ -44,7 +44,7 @@ const Navbar = (props: any) => {
     <HideOnScroll {...props}>
       <AppBar
         sx={{
-          backgroundColor: GRAY_MAIN,
+          backgroundColor: GRAY.main,
           backdropFilter: "blur(10px)",
           borderBottom: 1,
           borderColor: "#494949",

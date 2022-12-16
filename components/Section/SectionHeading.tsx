@@ -1,15 +1,5 @@
 import { Stack } from "@mui/material";
-import {
-  PRIMARY_DARK,
-  PRIMARY_LIGHT,
-  PRIMARY_MAIN,
-  SECONDARY_DARK,
-  SECONDARY_LIGHT,
-  SECONDARY_MAIN,
-  TERTIARY_DARK,
-  TERTIARY_LIGHT,
-  TERTIARY_MAIN,
-} from "../../styles/Theme";
+import { PRIMARY, SECONDARY, TERTIARY } from "../../styles/Theme";
 import SectionNumber from "./SectionNumber";
 import SectionTitle from "./SectionTitle";
 
@@ -27,19 +17,19 @@ const SectionHeading = ({ title, number, color, direction }: Props) => {
 
   switch (color) {
     case "primary":
-      textColor = PRIMARY_LIGHT;
-      shadowColor = PRIMARY_DARK;
-      borderColor = PRIMARY_MAIN;
+      textColor = PRIMARY.light;
+      shadowColor = PRIMARY.dark;
+      borderColor = PRIMARY.main;
       break;
     case "secondary":
-      textColor = SECONDARY_LIGHT;
-      shadowColor = SECONDARY_DARK;
-      borderColor = SECONDARY_MAIN;
+      textColor = SECONDARY.light;
+      shadowColor = SECONDARY.dark;
+      borderColor = SECONDARY.main;
       break;
     case "tertiary":
-      textColor = TERTIARY_LIGHT;
-      shadowColor = TERTIARY_DARK;
-      borderColor = TERTIARY_MAIN;
+      textColor = TERTIARY.light;
+      shadowColor = TERTIARY.dark;
+      borderColor = TERTIARY.main;
       break;
   }
 

@@ -1,3 +1,4 @@
+import { ButtonPropsColorOverrides } from "@mui/material";
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
 /* ---------------------------------- Fonts --------------------------------- */
@@ -5,48 +6,68 @@ const BODY_FONT_FAMILY = "Montserrat, sans-serif";
 /* ---------------------------------- Fonts --------------------------------- */
 
 /* --------------------------------- Colors --------------------------------- */
-export const CONTRAST_TEXT = "#FFF"
+export const CONTRAST_TEXT = "#FFF";
 
-export const PRIMARY_MAIN = "#BA68C8";
-export const PRIMARY_LIGHT = "#EE98FB";
-export const PRIMARY_DARK = "#883997";
+export const PRIMARY = {
+  main: "#BA68C8",
+  light: "#EE98FB",
+  dark: "#883997",
+};
 
-export const SECONDARY_MAIN = "#42A5F5";
-export const SECONDARY_LIGHT = "#80D6FF";
-export const SECONDARY_DARK = "#0077C2";
+export const SECONDARY = {
+  main: "#42A5F5",
+  light: "#80D6FF",
+  dark: "#0077C2",
+};
 
-export const TERTIARY_MAIN = "#3BAEA3";
-export const TERTIARY_LIGHT = "#6ED7D3";
-export const TERTIARY_DARK = "#299187";
+export const TERTIARY = {
+  main: "#3BAEA3",
+  light: "#6ED7D3",
+  dark: "#299187",
+};
 
-export const GRAY_MAIN = "#242121";
-export const GRAY_LIGHT = "#6D6D6D";
-export const GRAY_DARK = "#1B1B1B";
+export const GRAY = {
+  main: "#242121",
+  light: "#6D6D6D",
+  dark: "#1B1B1B",
+};
+
+const buttonColorsMap = {
+  primary: PRIMARY,
+  secondary: SECONDARY,
+  tertiary: TERTIARY,
+};
+
+const buttonVariantsStyles = Object.entries(buttonColorsMap).map(
+  ([colorName, color]) => ({
+    props: { color: colorName.toString() as keyof ButtonPropsColorOverrides },
+    style: {
+      boxShadow: `0 4px 15px 0 ${color.dark}`,
+      borderColor: color.main,
+      "&:hover": {
+        boxShadow: `0 4px 25px 0 ${color.dark}`,
+        borderColor: color.main,
+      },
+    },
+  })
+);
 
 let theme = createTheme({
   palette: {
     primary: {
-      main: PRIMARY_MAIN,
-      light: PRIMARY_LIGHT,
-      dark: PRIMARY_DARK,
+      ...PRIMARY,
       contrastText: CONTRAST_TEXT,
     },
     secondary: {
-      main: SECONDARY_MAIN,
-      light: SECONDARY_LIGHT,
-      dark: SECONDARY_DARK,
+      ...SECONDARY,
       contrastText: CONTRAST_TEXT,
     },
     tertiary: {
-      main: TERTIARY_MAIN,
-      light: TERTIARY_LIGHT,
-      dark: TERTIARY_DARK,
+      ...TERTIARY,
       contrastText: CONTRAST_TEXT,
     },
     gray: {
-      main: GRAY_MAIN,
-      light: GRAY_LIGHT,
-      dark: GRAY_DARK,
+      ...GRAY,
       contrastText: CONTRAST_TEXT,
     },
   },
@@ -54,9 +75,57 @@ let theme = createTheme({
     allVariants: {
       color: CONTRAST_TEXT,
       fontFamily: BODY_FONT_FAMILY,
-    }
+    },
+  },
+  components: {
+    MuiButton: {
+      variants: [...buttonVariantsStyles],
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+          fontSize: "1rem",
+          paddingBlock: "0.5rem",
+          paddingInline: "2rem",
+          borderRadius: "4px",
+          position: "relative",
+          border: 2,
+          "& span": {
+            transition: "all 0.25s ease-in-out",
+          },
+
+          "&:hover span": {
+            color: "#FFF",
+          },
+
+          "&:after": {
+            content: "''",
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "0%",
+            height: "100%",
+            backgroundColor: "transparent",
+            transition: "all 0.25s ease-in-out",
+          },
+
+          "&:hover:after": {
+            width: "100%",
+            zIndex: -1,
+          },
+        },
+        outlined: {
+          border: "2px solid",
+          "&:hover": {
+            border: "2px solid",
+            background: "#FFFFFF30",
+          },
+        },
+      },
+    },
   },
 });
 
 theme = responsiveFontSizes(theme);
-export default theme
+export default theme;

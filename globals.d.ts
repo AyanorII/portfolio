@@ -9,10 +9,19 @@ declare module "@mui/material/styles/createPalette" {
     tertiary: PaletteColor;
     gray: PaletteColor;
   }
+  interface ButtonPropsColorOverrides {
+    tertiary: true;
+  }
 }
 
 declare module "@mui/material" {
   interface ButtonPropsColorOverrides {
+    tertiary: true;
+  }
+}
+declare module "@mui/material/Button/Button" {
+  interface ButtonPropsVariantOverrides {
+
     tertiary: true;
   }
 }

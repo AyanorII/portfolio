@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import { PRIMARY_DARK, PRIMARY_LIGHT, PRIMARY_MAIN } from "../../styles/Theme";
+import { PRIMARY } from "../../styles/Theme";
 import skills from "./skills.json";
 
 type Props = {};
@@ -19,10 +19,10 @@ const Skills = (props: Props) => {
           fontWeight="500"
           fontFamily="Gaoel, sans-serif"
           sx={{
-            background: `-webkit-linear-gradient(${PRIMARY_MAIN}, ${PRIMARY_LIGHT})`,
+            background: `-webkit-linear-gradient(${PRIMARY.main}, ${PRIMARY.light})`,
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            filter: `drop-shadow(0 4px 30px ${PRIMARY_DARK})`,
+            filter: `drop-shadow(0 4px 30px ${PRIMARY.dark})`,
           }}
         >
           My skills

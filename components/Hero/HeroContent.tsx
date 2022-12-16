@@ -1,6 +1,5 @@
-import { Stack, Typography } from "@mui/material";
-import { PRIMARY_LIGHT } from "../../styles/Theme";
-import Button from "../Button";
+import { Button, Stack, Typography } from "@mui/material";
+import { PRIMARY } from "../../styles/Theme";
 
 const HeroContent = () => {
   return (
@@ -24,7 +23,7 @@ const HeroContent = () => {
           fontFamily="Montserrat, sans-serif"
           color="primary"
           sx={{
-            textShadow: `0px 0px 60px ${PRIMARY_LIGHT}30`,
+            textShadow: `0px 0px 60px ${PRIMARY.light}30`,
             "&:after": {
               content: "','",
               color: "#FFF",
@@ -46,7 +45,8 @@ const HeroContent = () => {
         maxWidth="50ch"
         margin={{ xs: "0 auto", lg: "0" }}
       >
-        A full-stack developer that loves to transform amazing ideas into beautiful projects.
+        A full-stack developer that loves to transform amazing ideas into
+        beautiful projects.
       </Typography>
       {/* -------------------------- Sub Heading -------------------------- */}
       {/* -------------------------- CTA Buttons -------------------------- */}

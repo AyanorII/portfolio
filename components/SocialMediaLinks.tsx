@@ -13,12 +13,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import {
-  GRAY_DARK,
-  PRIMARY_DARK,
-  SECONDARY_DARK,
-  TERTIARY_DARK,
-} from "../styles/Theme";
+import { GRAY, PRIMARY, SECONDARY, TERTIARY } from "../styles/Theme";
 
 const SOCIAL_MEDIA_LINKS = [
   {
@@ -66,15 +61,15 @@ const SocialMediaLinks = () => {
   const getColor = (index: number) => {
     switch (index) {
       case 0:
-        return PRIMARY_DARK;
+        return PRIMARY.dark;
       case 1:
-        return SECONDARY_DARK;
+        return SECONDARY.dark;
       case 2:
-        return TERTIARY_DARK;
+        return TERTIARY.dark;
       case 3:
-        return GRAY_DARK;
+        return GRAY.dark;
       default:
-        return GRAY_DARK;
+        return GRAY.dark;
     }
   };
 
@@ -84,7 +79,7 @@ const SocialMediaLinks = () => {
     left: { xs: 16, lg: 60 },
 
     "& .MuiFab-root": {
-      boxShadow: `0px 4px 20px 3px ${PRIMARY_DARK}, 0px 6px 10px 5px rgb(0 0 0 / 65%), 0px 1px 18px 0px rgb(0 0 0 / 12%);`,
+      boxShadow: `0px 4px 20px 3px ${PRIMARY.dark}, 0px 6px 10px 5px rgb(0 0 0 / 65%), 0px 1px 18px 0px rgb(0 0 0 / 12%);`,
     },
 
     "& #Socialmedialinks-actions": {
