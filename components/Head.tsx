@@ -8,7 +8,7 @@ const Head = () => {
       <meta name="title" content="Ayanori Toyoda - Full-Stack Developer" />
       <meta
         name="description"
-        content="Hi there, my name is Ayanori Toyoda, a passionate Brazilian full-stack developer based in Saitama, Japan, that loves to bring beautiful design into amazing real-life projects."
+        content="Hi there, my name is Ayanori Toyoda, a full-stack developer and Teacher Assistant at Le Wagon Tokyo, based in Saitama, Japan."
       />
       <meta name="author" content="Ayanori Toyoda" />
       <meta
@@ -35,11 +35,11 @@ const Head = () => {
       />
       <meta
         property="og:description"
-        content="Hi there, my name is Ayanori Toyoda, a passionate Brazilian full-stack developer based in Saitama, Japan, that loves to bring beautiful design into amazing real-life projects."
+        content="Hi there, my name is Ayanori Toyoda, a full-stack developer and Teacher Assistant at Le Wagon Tokyo, based in Saitama, Japan."
       />
       <meta
         property="og:image"
-        content="https://i.postimg.cc/VkBg7bY1/pika-1666767255363-1x.png"
+        content="https://i.imgur.com/cibYiPI.png"
       />
       {/* ----------------------- Open Graph / Facebook -------------------- */}
 
@@ -52,11 +52,11 @@ const Head = () => {
       />
       <meta
         property="twitter:description"
-        content="Hi there, my name is Ayanori Toyoda, a passionate Brazilian full-stack developer based in Saitama, Japan, that loves to bring beautiful design into amazing real-life projects."
+        content="Hi there, my name is Ayanori Toyoda, a full-stack developer and Teacher Assistant at Le Wagon Tokyo, based in Saitama, Japan."
       />
       <meta
         property="twitter:image"
-        content="https://i.postimg.cc/VkBg7bY1/pika-1666767255363-1x.png"
+        content="https://i.imgur.com/cibYiPI.png"
       />
       {/* ----------------------------- Twitter ---------------------------- */}
     </NextHead>

@@ -27,8 +27,8 @@ const AboutMe = () => {
       >
         I started to learn web development in May 2021 and went to one of the
         most famous and prestigious bootcamps in Japan and the world. I love and
-        focus more on front-end development but also have experience with
-        back-end technologies.
+        focus more on front-end development but I also have experience with
+        back-end technologies. After graduating, I&apos;ve been working at the same bootcamp now as a Teacher Assistant.
       </Typography>
       <Typography
         variant="body1"
@@ -36,10 +36,8 @@ const AboutMe = () => {
         lineHeight={1.85}
         letterSpacing={0.5}
       >
-        Since I started my journey to become a developer, I’ve been building
-        real-life-like, fully responsive side projects to help me learn new
-        technologies and apply all my knowledge while constantly learning new
-        things.
+        Since I started my journey to become a developer, I&apos;ve been building fully responsive projects to help me learn new
+        technologies and apply all my knowledge.
       </Typography>
     </Stack>
   );
