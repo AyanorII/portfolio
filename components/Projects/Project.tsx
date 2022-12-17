@@ -49,7 +49,7 @@ const Project = ({ project, index }: Props) => {
     "&:after": {
       height: "50px",
       width: "5px",
-      left: isIndexEven ? "22%" : "77.5%",
+      left: isIndexEven ? "22.5%" : "77.25%",
       top: "0",
       borderRadius: `
               ${isIndexEven ? "4px" : "0"}
@@ -63,9 +63,9 @@ const Project = ({ project, index }: Props) => {
     "&:before": {
       width: "15px",
       height: "15px",
-      left: isIndexEven ? "48%" : "51%",
-      top: "-40px",
-      transform: `rotate(45deg) translateX(${isIndexEven ? "-48%" : "-51%"})`,
+      left: isIndexEven ? "22.5%" : "77.5%",
+      top: "50px",
+      transform: `rotate(45deg) translateX(${isIndexEven ? "-50%" : "-48%"}) ${isIndexEven ? "" : "translateY(32%)"}`,
     },
   };
 
@@ -112,7 +112,6 @@ const Project = ({ project, index }: Props) => {
         md={5.5}
         order={{ md: isIndexEven ? 0 : 1 }}
         sx={{
-          position: "relative",
           ...barTipStyles,
 
           "&:hover div": {
@@ -221,6 +220,7 @@ const Project = ({ project, index }: Props) => {
               variant="contained"
               color="secondary"
               href={link}
+              target="_blank"
               startIcon={<LinkIcon />}
               sx={{ flexGrow: 1 }}
             >
@@ -238,6 +238,7 @@ const Project = ({ project, index }: Props) => {
               variant="contained"
               color="primary"
               href={sourceCode}
+              target="_blank"
               startIcon={<CodeIcon />}
             >
               Source{" "}
