@@ -1,19 +1,28 @@
 import NextHead from "next/head";
 
 const Head = () => {
+  const title = "Ayanori Toyoda - Software Engineer";
+  const description = `
+    Meet Ayanori Toyoda, a Brazilian-born Full Stack Software Engineer based in Saitama, Japan.
+    Explore his portfolio, showcasing a range of projects crafted with Next.js, Javascript, React, Ruby on Rails, and Typescript.
+    Dive into Ayanori's journey from a world-class bootcamp to a lead role in a matchmaking startup.
+    Discover his passion for continuous learning and innovation in software engineering.
+  `
+  const image = "https://i.postimg.cc/Ss3vDG1P/pika-1688092694582-1x.png"
+
   return (
     <NextHead>
       {/* ------------------------ Primary Meta Tags ----------------------- */}
-      <title>Ayanori Toyoda - Full-Stack Developer</title>
-      <meta name="title" content="Ayanori Toyoda - Full-Stack Developer" />
+      <title>{title}</title>
+      <meta name="title" content={title} />
       <meta
         name="description"
-        content="Hi there, my name is Ayanori Toyoda, a full-stack developer and Teacher Assistant at Le Wagon Tokyo, based in Saitama, Japan."
+        content={description}
       />
       <meta name="author" content="Ayanori Toyoda" />
       <meta
         name="keywords"
-        content="HTML, CSS, JavaScript, React, Next.js, TypeScript, Ruby, Ruby on Rails, Web Development, Front-end developer, Full-Stack developer"
+        content="HTML, CSS, JavaScript, React, Next.js, TypeScript, Ruby, Ruby on Rails, Web Development, Front-end developer, Software Engineer"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/logo.png" />
@@ -31,15 +40,15 @@ const Head = () => {
       <meta property="og:url" content="https://ayanori-toyoda.com/" />
       <meta
         property="og:title"
-        content="Ayanori Toyoda - Full-Stack Developer"
+        content={title}
       />
       <meta
         property="og:description"
-        content="Hi there, my name is Ayanori Toyoda, a full-stack developer and Teacher Assistant at Le Wagon Tokyo, based in Saitama, Japan."
+        content={description}
       />
       <meta
         property="og:image"
-        content="https://i.imgur.com/cibYiPI.png"
+        content={image}
       />
       {/* ----------------------- Open Graph / Facebook -------------------- */}
 
@@ -48,15 +57,15 @@ const Head = () => {
       <meta property="twitter:url" content="https://ayanori-toyoda.com/" />
       <meta
         property="twitter:title"
-        content="Ayanori Toyoda - Full-Stack Developer"
+        content={title}
       />
       <meta
         property="twitter:description"
-        content="Hi there, my name is Ayanori Toyoda, a full-stack developer and Teacher Assistant at Le Wagon Tokyo, based in Saitama, Japan."
+        content={description}
       />
       <meta
         property="twitter:image"
-        content="https://i.imgur.com/cibYiPI.png"
+        content={image}
       />
       {/* ----------------------------- Twitter ---------------------------- */}
     </NextHead>
