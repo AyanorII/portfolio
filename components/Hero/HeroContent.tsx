@@ -45,8 +45,8 @@ const HeroContent = () => {
         maxWidth="50ch"
         margin={{ xs: "0 auto", lg: "0" }}
       >
-        A full-stack developer that loves to transform amazing ideas into
-        beautiful projects.
+        A passionate Software Engineer, bringing incredible ideas to life
+        through beautifully crafted digital solutions.
       </Typography>
       {/* -------------------------- Sub Heading -------------------------- */}
       {/* -------------------------- CTA Buttons -------------------------- */}
