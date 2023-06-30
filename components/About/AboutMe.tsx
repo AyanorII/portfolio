@@ -1,5 +1,17 @@
 import { Stack, Typography } from "@mui/material";
 
+const Paragraph = ({ children }: { children: React.ReactNode }) => (
+  <Typography
+    variant="body1"
+    gutterBottom
+    lineHeight={1.85}
+    letterSpacing={0.5}
+    whiteSpace="break-spaces"
+  >
+    {children}
+  </Typography>
+);
+
 const AboutMe = () => {
   return (
     <Stack
@@ -9,36 +21,34 @@ const AboutMe = () => {
       position="relative"
       left={{ lg: "240px" }}
     >
-      <Typography
-        variant="body1"
-        gutterBottom
-        lineHeight={1.85}
-        letterSpacing={0.5}
-        whiteSpace="break-spaces"
-      >
-        Hi there, nice to meet you! My name is Ayanori Toyoda, a passionate
-        Brazilian full-stack developer based in Saitama, Japan.
-      </Typography>
-      <Typography
-        variant="body1"
-        gutterBottom
-        lineHeight={1.85}
-        letterSpacing={0.5}
-      >
-        I started to learn web development in May 2021 and went to one of the
-        most famous and prestigious bootcamps in Japan and the world. I love and
-        focus more on front-end development but I also have experience with
-        back-end technologies. After graduating, I&apos;ve been working at the same bootcamp now as a Teacher Assistant.
-      </Typography>
-      <Typography
-        variant="body1"
-        gutterBottom
-        lineHeight={1.85}
-        letterSpacing={0.5}
-      >
-        Since I started my journey to become a developer, I&apos;ve been building fully responsive projects to help me learn new
-        technologies and apply all my knowledge.
-      </Typography>
+      <Paragraph>
+        Hello and welcome! I&apos;m Ayanori Toyoda, a Brazilian-born Software
+        Engineer,
+      </Paragraph>
+      <Paragraph>
+        My passion for coding took flight at a world-class bootcamp, where I got
+        to deeply immerse myself in the exciting world of full-stack
+        development, with a special love for the creativity of front-end
+        technologies. I always have a project on the go - developing realistic,
+        fully responsive applications that allow me to constantly explore,
+        learn, and grow.
+      </Paragraph>
+      <Paragraph>
+        Apart from creating, I had the fantastic opportunity to serve as a Lead
+        Teaching Assistant. This role not only allowed me to share what
+        I&apos;ve learned but also introduced me to a wide variety of
+        problem-solving techniques. I then brought these skills into my role as
+        a Front End Developer, where I learned to thrive in bustling
+        environments and truly discovered the magic of teamwork.
+      </Paragraph>
+      <Paragraph>
+        Currently, I&apos;m channeling my experience and skills into an exciting
+        matchmaking startup, focusing on crafting comprehensive software
+        solutions to fit ever-changing needs. My toolbox includes Next.js,
+        Javascript, React, Ruby on Rails, and Typescript. Additionally, I&apos;m
+        always on the lookout for new avenues to explore, currently diving into
+        the realms of Cybersecurity and Python.
+      </Paragraph>
     </Stack>
   );
 };
