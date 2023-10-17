@@ -19,7 +19,6 @@
     "name": "Next.js",
     "icon": "/icons/nextjs.png"
   },
-
   {
     "name": "TypeScript",
     "icon": "/icons/typescript.png"
@@ -28,7 +27,6 @@
     "name": "Ruby",
     "icon": "/icons/ruby.png"
   },
-
   {
     "name": "Ruby on Rails",
     "icon": "/icons/rails.png"
@@ -44,5 +42,13 @@
   {
     "name": "MongoDB",
     "icon": "/icons/mongodb.webp"
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "/icons/tailwind.png"
+  },
+  {
+    "name": "Git",
+    "icon": "/icons/git.png"
   }
 ]
