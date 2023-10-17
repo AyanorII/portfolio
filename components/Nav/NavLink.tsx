@@ -1,4 +1,4 @@
-import { Typography, useMediaQuery } from "@mui/material";
+import { SxProps, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 
 type Props = {
@@ -38,9 +38,9 @@ const NavLink = ({ href, label, index }: Props) => {
     variant = "h6";
   }
 
-  const linkStyles = {
+  const linkStyles: SxProps = {
     position: "relative",
-    fontSize: isMobile ? "2rem !important" : "auto",
+    fontSize: isMobile ? "1.5rem !important" : "1rem !important",
 
     "&:after": {
       content: "''",
@@ -65,7 +65,6 @@ const NavLink = ({ href, label, index }: Props) => {
         component="a"
         fontWeight="normal"
         fontFamily="Gaoel, sans-serif"
-        color={linkBottomColor}
         sx={linkStyles}
       >
         {label}

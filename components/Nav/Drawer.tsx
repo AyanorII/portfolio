@@ -31,13 +31,13 @@ const Drawer = ({ mobileOpen, handleDrawerToggle, closeDrawer }: Props) => {
           md: "none",
         },
         "& .MuiDrawer-paper": {
-          width: {xs: "240px", sm: "300px"},
+          width: "calc(100vw - 25%)",
           backgroundColor: "gray.main",
         },
       }}
     >
       <Container>
-        <Toolbar sx={{ justifyContent: "end" }}>
+        <Toolbar sx={{ justifyContent: "end", marginBottom: "2.5rem" }}>
           <IconButton
             aria-label="open drawer"
             edge="start"
@@ -50,10 +50,7 @@ const Drawer = ({ mobileOpen, handleDrawerToggle, closeDrawer }: Props) => {
             <CloseIcon />
           </IconButton>
         </Toolbar>
-        <Stack height="calc(90vh - 64px)" justifyContent="center" gap={5}>
-          <Box alignSelf="center" marginBottom={2}>
-            <Logo light big/>
-          </Box>
+        <Stack height="calc(90vh - 64px)" gap={5} paddingX="1rem">
           <NavLinks closeDrawer={closeDrawer} />
           <SocialMediaLinks />
         </Stack>
