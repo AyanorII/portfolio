@@ -45,7 +45,7 @@ const HeroContent = () => {
         maxWidth="50ch"
         margin={{ xs: "0 auto", lg: "0" }}
       >
-        A passionate Software Engineer, bringing incredible ideas to life
+        A passionate Front-End Developer, bringing incredible ideas to life
         through beautifully crafted digital solutions.
       </Typography>
       {/* -------------------------- Sub Heading -------------------------- */}

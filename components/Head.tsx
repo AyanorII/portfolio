@@ -1,9 +1,9 @@
 import NextHead from "next/head";
 
 const Head = () => {
-  const title = "Ayanori Toyoda - Software Engineer";
+  const title = "Ayanori Toyoda - Front-End Developer";
   const description = `
-    Meet Ayanori Toyoda, a Brazilian-born Full Stack Software Engineer based in Saitama, Japan.
+    Meet Ayanori Toyoda, a Brazilian-born Front-End Developer based in Saitama, Japan.
     Explore his portfolio, showcasing a range of projects crafted with Next.js, Javascript, React, Ruby on Rails, and Typescript.
     Dive into Ayanori's journey from a world-class bootcamp to a lead role in a matchmaking startup.
     Discover his passion for continuous learning and innovation in software engineering.

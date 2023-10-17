@@ -22,8 +22,7 @@ const AboutMe = () => {
       left={{ lg: "240px" }}
     >
       <Paragraph>
-        Hello and welcome! I&apos;m Ayanori Toyoda, a Brazilian-born Software
-        Engineer,
+        Hello and welcome! I&apos;m Ayanori Toyoda, a Brazilian-born Front-End Developer,
       </Paragraph>
       <Paragraph>
         My passion for coding took flight at a world-class bootcamp, where I got
@@ -43,11 +42,9 @@ const AboutMe = () => {
       </Paragraph>
       <Paragraph>
         Currently, I&apos;m channeling my experience and skills into an exciting
-        matchmaking startup, focusing on crafting comprehensive software
+        B2B startup, focusing on crafting comprehensive software
         solutions to fit ever-changing needs. My toolbox includes Next.js,
-        Javascript, React, Ruby on Rails, and Typescript. Additionally, I&apos;m
-        always on the lookout for new avenues to explore, currently diving into
-        the realms of Cybersecurity and Python.
+        Javascript, React, Ruby on Rails, and Typescript.
       </Paragraph>
     </Stack>
   );
