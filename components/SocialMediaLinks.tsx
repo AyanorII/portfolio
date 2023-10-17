@@ -17,22 +17,22 @@ import { GRAY, PRIMARY, SECONDARY, TERTIARY } from "../styles/Theme";
 
 const SOCIAL_MEDIA_LINKS = [
   {
-    socialMedia: "instagram",
+    socialMedia: "Instagram",
     href: "https://www.instagram.com/ayanori.toyoda/",
     icon: <InstagramIcon sx={{ color: "primary.contrastText" }} />,
   },
   {
-    socialMedia: "facebook",
+    socialMedia: "Facebook",
     href: "https://www.facebook.com/profile.php?id=100012707850259",
     icon: <FacebookIcon sx={{ color: "primary.contrastText" }} />,
   },
   {
-    socialMedia: "linkedin",
+    socialMedia: "Linkedin",
     href: "https://www.linkedin.com/in/ayanori-toyoda/",
     icon: <LinkedInIcon sx={{ color: "primary.contrastText" }} />,
   },
   {
-    socialMedia: "github",
+    socialMedia: "Github",
     href: "https://github.com/AyanorII",
     icon: <GitHubIcon sx={{ color: "primary.contrastText" }} />,
   },
