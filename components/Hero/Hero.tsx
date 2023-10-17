@@ -1,7 +1,8 @@
-import { Container, Stack, useMediaQuery } from "@mui/material";
+import { Box, Container, Stack, useMediaQuery } from "@mui/material";
 import { motion, Variants } from "framer-motion";
-import ProfileImage from "../ProfileImage";
 import HeroContent from "./HeroContent";
+import Image from "next/image";
+import { PRIMARY, SECONDARY, TERTIARY } from "../../styles/Theme";
 
 const Hero = () => {
   enum NAVBAR_HEIGHT {
@@ -13,10 +14,14 @@ const Hero = () => {
   const isTablet = useMediaQuery("(min-width: 768px)");
 
   const imageVariants: Variants = {
-    animate: isTablet
-      ? { x: ["200%", "-10%", "0%"], rotate: [360, -15, 0] }
-      : {},
-    initial: isTablet ? { x: "200%", rotate: 360 } : { x: 0, rotate: 0 },
+    animate: {
+      x: ["200%", "-10%", "0%"],
+      rotate: [360, -15, 0],
+    },
+    initial: {
+      x: "200%",
+      rotate: 360,
+    },
   };
 
   return (
@@ -31,7 +36,7 @@ const Hero = () => {
         justifyContent="center"
         alignItems="center"
         gap={5}
-        minHeight="100vh"
+        minHeight="100dvh"
       >
         <motion.div
           variants={imageVariants}
@@ -44,7 +49,25 @@ const Hero = () => {
             times: [0, 0.25, 0.35],
           }}
         >
-          <ProfileImage />
+          <Box
+            maxWidth="100%"
+            sx={{
+              position: "relative",
+              width: { xs: "250px", md: "350px", lg: "400px" },
+              height: { xs: "250px", md: "350px", lg: "400px" },
+              margin: { xs: "0 auto", lg: "0 0 0 auto" },
+              filter: `drop-shadow(0px 0px 60px ${PRIMARY.light}25)
+                  drop-shadow(0px 0px 60px ${SECONDARY.light}25)
+                  drop-shadow(0px 0px 60px ${TERTIARY.light}25)`,
+            }}
+          >
+            <Image
+              src="/profile.png"
+              alt="Ayanori Rodrigo Toyoda"
+              layout="fill"
+              priority
+            />
+          </Box>
         </motion.div>
         <HeroContent />
       </Stack>
