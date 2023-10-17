@@ -1,4 +1,5 @@
 import { ThemeProvider as MuiThemeProvider, useMediaQuery } from "@mui/material";
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { ThemeProvider as SCThemeProvider } from "styled-components";
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </>
         </SCThemeProvider>
       </MuiThemeProvider>
+      <Analytics />
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       <noscript>
         {/* eslint-disable @next/next/no-img-element */}
