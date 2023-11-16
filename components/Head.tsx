@@ -20,6 +20,7 @@ const Head = () => {
         content={description}
       />
       <meta name="author" content="Ayanori Toyoda" />
+      <meta name="google-site-verification" content="bNF8p59jujcVoxrL0eMOzRVuR4Fa3ryIE1kBG6mXnRs" />
       <meta
         name="keywords"
         content="HTML, CSS, JavaScript, React, Next.js, TypeScript, Ruby, Ruby on Rails, Web Development, Front-end developer, Software Engineer"
