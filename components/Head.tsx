@@ -34,6 +34,7 @@ const Head = () => {
         type="font/woff"
         crossOrigin="anonymous"
       />
+      <link rel="canonical" href="https://ayanori-toyoda.com"/>
       {/* ------------------------ Primary Meta Tags ----------------------- */}
 
       {/* ---------------------- Open Graph / Facebook --------------------- */}
