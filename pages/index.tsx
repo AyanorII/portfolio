@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 // import AboutSection from "../components/About/AboutSection";
 // import Head from "../components/Head";
-import Hero from "../components/Hero/Hero";
+// import Hero from "../components/Hero/Hero";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
 const Home: NextPage = () => {
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   return (
     <>
       {/* <Head /> */}
-      <Hero />
+      {/* <Hero /> */}
       <AboutSection />
       <ProjectsSection />
       <Contact />
