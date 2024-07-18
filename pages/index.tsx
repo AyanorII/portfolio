@@ -2,7 +2,7 @@ import { useMediaQuery } from "@mui/material";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 // import AboutSection from "../components/About/AboutSection";
-import Head from "../components/Head";
+// import Head from "../components/Head";
 import Hero from "../components/Hero/Hero";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head />
+      {/* <Head /> */}
       <Hero />
       <AboutSection />
       <ProjectsSection />
