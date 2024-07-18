@@ -1,0 +1,61 @@
+name: Staging Deploy
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  update_ec2:
+    runs-on: ubuntu-latest
+    # env:
+    #   NEXT_PUBLIC_BASE_API: ${{ secrets.NEXT_PUBLIC_BASE_API }}
+    #   NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+    #   NEXT_PUBLIC_BUILD_ID: ${{ github.sha }}
+
+      # TODO: Don't forget to add the following secrets to your repository
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn build
+
+      - name: Compress .next folder
+        run: tar -czf next-build.tar.gz .next
+
+      - name: Send build artifacts
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.STG_HOST }}
+          username: ${{ secrets.STG_USERNAME }}
+          key: ${{ secrets.STG_SSH_KEY }}
+          source: next-build.tar.gz
+          target: /var/www/portfolio/
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.STG_HOST }}
+          username: ${{ secrets.STG_USERNAME }}
+          key: ${{ secrets.STG_SSH_KEY }}
+          script: |
+            cd /var/www/portfolio/
+            export PATH=$PATH:/root/.nvm/versions/node/v20.14.0/bin
+            git checkout -f dev && git clean -f -d && git pull origin dev
+            yarn install --frozen-lockfile
+            mkdir -p .new_next
+            tar -xzf next-build.tar.gz -C .new_next --strip-components=1
+            rm next-build.tar.gz
+            rm -rf .next
+            mv .new_next .next
+            pm2 restart portfolio
